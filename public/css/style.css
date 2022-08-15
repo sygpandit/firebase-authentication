@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+}
+.md-form{
+    width: 45%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+.scl img{
+    max-width: 10rem;
+    align-items: center;
+    border-radius: 50%;
+}
+.scl h1{
+    color: #9e2626;
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+}
+.form-check{
+    cursor: pointer;
+}
+.scl h5{
+    font-family: 'Poppins', sans-serif;
+}
+.scl{
+    text-align: center;
+}
+#login-form{
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+.input-group input, .input-group input:focus, select{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+}
+.input-group input{
+    width: 80%;
+}
+.input-group label, .input-group input, select{
+    border-bottom: 2px solid #08702a;
+    padding: 1rem;
+    padding-bottom: .5rem;
+}
+.input-group select{
+    width: 80%;
+    color: #000;
+}
+.input-group input:focus{
+    border-bottom: 2px dashed #08702a;
+}
+#show{
+    font-size: 20px;
+    cursor: pointer;
+    padding-bottom: 0;
+}
+.input-group:focus-within #show{
+    border-bottom: 2px dashed #08702a !important;
+}
+.input-group label{
+    font-size: 1.5rem;
+}
+.form-submit button{
+    width: 100%;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+#footer{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    bottom: 0;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #08702a;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+#body {
+  display: none;
+}
+@media (max-width: 1200px){
+    .md-form{
+        width: 60%;
+    }
+}
+@media(max-width: 1000px){
+    .md-form{
+        width: 70%;
+    }
+}
+@media (max-width: 800px) {
+    .md-form{
+        padding: 0;
+        box-shadow: none;
+    }
+}
+@media(max-width: 600px){
+    .scl h1{
+        font-size: 1rem;
+        padding: 1rem;
+        width: 100%;
+    }
+    .scl h5{
+        font-size: 1rem;
+    }
+    .input-group{
+        margin: auto;
+    }
+    #footer span{
+        display: block;
+    }
+    #footer span:nth-child(2){
+        display: none;
+    }
+    .input-group input{
+        width: 70%;
+    }
+}

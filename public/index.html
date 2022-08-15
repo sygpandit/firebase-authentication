@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="img/cjbs.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shree Chandra Jyoti Basic School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body onload="checkuser()">
+  <div id="loader"></div>
+  <div id="body">
+    <div class="container-sm container-fluid w-100 p-0">
+      <div class="md-form">
+        <div class="scl">
+          <img src="img/cjbs.png" alt="Logo">
+          <h1>Shree Chandra Jyoti Basic School</h1>
+          <h5>Login To Continue</h5>
+        </div>
+        <form class="login" id="login-form">
+          <div class="input-group">
+            <label for="userid"><i class="bi bi-person-fill"></i></label>
+            <input type="text" class="form-control" id="userid" placeholder="Username" required
+              title="Username is Required">
+          </div>
+          <div class="input-group">
+            <label for="passid"><i class="bi bi-lock-fill"></i></label>
+            <input type="password" class="form-control" id="passid" placeholder="Password" minlength="8" required
+              title="Password is Required">
+            <label for="passid" id="show" class="bi bi-eye-fill"></label>
+          </div>
+          <small class="text-danger" id="wrong-info"></small>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="remid" checked>
+            <label class="form-check-label" for="remid">Remember Me</label>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-success" id="submit-btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section id="footer"><span>&copy; 2021 - Chandra Jyoti Basic School </span><span>|</span><span> All Rights Reserved
+      </span></section>
+  </div><!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAMnFKyd3Irb3yaDFlJ0TzyZVVaHuYmkyk",
+      authDomain: "cjbsnp.firebaseapp.com",
+      projectId: "cjbsnp",
+      storageBucket: "cjbsnp.appspot.com",
+      messagingSenderId: "1093272784193",
+      appId: "1:1093272784193:web:fe50106e5a2f1a9c9065c0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //make auth references
+    let auth = firebase.auth();
+    let db = firebase.firestore();
+    //update settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
