@@ -1,2 +1,2 @@
 # firebase-authentication
-A dummy application with firebase authentication
+A dummy school management system with firebase authentication
